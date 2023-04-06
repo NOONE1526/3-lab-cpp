@@ -63,8 +63,13 @@ void inputArray(WORKER* w, int n) {
                 }
             }
             if (count == 0) {
-                w[i].tabNum = tempnum;
-                b = true;
+                if (tempnum > 0) {
+                    w[i].tabNum = tempnum;
+                    b = true;
+                }
+                else {
+                    cout << "Неверный ввод\n" << endl;
+                }
             }
         }
         cout << "Введите имя: ";
